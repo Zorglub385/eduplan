@@ -1,9 +1,7 @@
 # Security Policy
 
 ## 🚨 Signalement d’une faille
-Merci de me contacter directement à :
-
-➡️ **150531684+Zorglub385@users.noreply.github.com**
+Merci d’ouvrir une Issue privée via GitHub Security Advisories.
 
 Veuillez fournir :
 - une description du problème
