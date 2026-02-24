@@ -26,3 +26,4 @@ Merci d’inclure :
 ## 📜 Code of Conduct
 Respect, bienveillance et clarté :
 Tout comportement inapproprié ne sera pas toléré.
+Ne pas mettre d'url ICAL personnelle.
