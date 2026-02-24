@@ -8,12 +8,12 @@ const EDUPLAN = {
   // ── 1. URL iCal Pronote ────────────────────────────────
   // Pronote › Paramètres (⚙) › Agenda › Exporter › Copier le lien
   // Ressemble à : https://votre-etab.index-education.net/pronote/ical/...
-  ICS_URL: "COLLEZ_VOTRE_URL_ICS_ICI",
+  ICS_URL: "https://raw.githubusercontent.com/Zorglub385/eduplan/refs/heads/main/example/calendrier_anonymise.ics",
 
   // ── 2. Identité ────────────────────────────────────────
-  NOM:           "Prénom NOM",
-  CLASSE:        "4ème A",
-  ETABLISSEMENT: "Collège ou Lycée ...",
+  NOM:           "Lucas MARTIN",
+  CLASSE:        "4ème 5",
+  ETABLISSEMENT: "Collège Albert Camus",
 
   // ── 3. Zone de vacances ────────────────────────────────
   // "AUTO" = détection par IP via ipwhois.app
