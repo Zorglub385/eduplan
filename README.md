@@ -4,12 +4,18 @@
 > Zéro serveur · Zéro installation · Double-clic et c'est parti.
 
 ---
+![License](https://img.shields.io/github/license/Zorglub385/eduplan)
+![Release](https://img.shields.io/github/v/release/Zorglub385/eduplan)
+![Issues](https://img.shields.io/github/issues/Zorglub385/eduplan)
 
 ## Démo rapide
 
 **1.** [Télécharger le ZIP](../../releases/latest) → extraire  
 **2.** Ouvrir `config.js` → coller votre URL iCal Pronote  
 **3.** Double-cliquer sur `index.html`
+
+**OU :**
+Aller sur le site web du projet pour voir l'interface de l'app (mais sans évènements,car pas de configuration)
 
 ---
 
