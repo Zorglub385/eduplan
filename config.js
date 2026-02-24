@@ -8,7 +8,7 @@ const EDUPLAN = {
   // ── 1. URL iCal Pronote ────────────────────────────────
   // Pronote › Paramètres (⚙) › Agenda › Exporter › Copier le lien
   // Ressemble à : https://votre-etab.index-education.net/pronote/ical/...
-  ICS_URL: "https://raw.githubusercontent.com/Zorglub385/eduplan/refs/heads/main/example/calendrier_anonymise.ics",
+  ICS_URL: "https://raw.githubusercontent.com/Zorglub385/eduplan/refs/heads/Example/calendrier_anonymise.ics",
 
   // ── 2. Identité ────────────────────────────────────────
   NOM:           "Lucas MARTIN",
