@@ -151,6 +151,14 @@ Téléchargez la [dernière release](../../releases/latest), modifiez `config.js
 - Aucun cookie, aucun analytics, aucun tracker
 
 ---
+## Support
 
+Pour signaler un bug ou proposer une amélioration :
+👉 Ouvrez une Issue
+
+## Contribuer
+
+Les Pull Requests sont les bienvenues !
+Merci de lire CONTRIBUTING.md avant toute modification.
 
 *EduPlan est un projet indépendant, non affilié à Pronote / Index Éducation.*
