@@ -15,7 +15,7 @@
 **3.** Double-cliquer sur `index.html`
 
 **OU :**
-Aller sur le site web du projet pour voir l'interface de l'app (mais sans évènements,car pas de configuration)
+Aller sur le site web du projet, pour voir un emplois d'une personne fictive ! (correspond à la branche "Example" de ce répertoire. Cette branche permet de montrer une exemple d'emplois du temps bien configuré. Utiliser cette branche pour voir un exemple de configuration)
 
 ---
 
