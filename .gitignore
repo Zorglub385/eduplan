@@ -1,0 +1,16 @@
+# EduPlan — Ne jamais committer votre URL iCal personnelle !
+# Si vous forkez ce projet, renommez config.js en config.example.js
+# et créez un config.js local (ignoré ci-dessous)
+
+# Config locale avec données personnelles
+config.local.js
+
+# Système
+.DS_Store
+Thumbs.db
+*.log
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
