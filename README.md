@@ -3,19 +3,48 @@
 > Une application web légère, belle et rapide pour votre emploi du temps Pronote.  
 > Zéro serveur · Zéro installation · Double-clic et c'est parti.
 
+[![License](https://img.shields.io/github/license/Zorglub385/eduplan)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/Zorglub385/eduplan)](https://github.com/Zorglub385/eduplan/releases/latest)
+[![Issues](https://img.shields.io/github/issues/Zorglub385/eduplan)](https://github.com/Zorglub385/eduplan/issues)
+
 ---
-![License](https://img.shields.io/github/license/Zorglub385/eduplan)
-![Release](https://img.shields.io/github/v/release/Zorglub385/eduplan)
-![Issues](https://img.shields.io/github/issues/Zorglub385/eduplan)
 
-## Démo rapide
+## Aperçu
 
-**1.** [Télécharger le ZIP](../../releases/latest) → extraire  
+![EduPlan — vue semaine mode sombre](screenshots/dark-week.png)
+*Vue semaine — mode sombre*
+
+![EduPlan — vue semaine mode clair](screenshots/light-week.png)
+*Vue semaine — mode clair*
+
+<details>
+<summary>Voir plus de captures</summary>
+
+![EduPlan — modal détail cours](screenshots/modal.png)
+*Modal de détail — clic sur un cours*
+
+![EduPlan — vue jour](screenshots/day-view.png)
+*Vue jour — navigation rapide*
+
+![EduPlan — semaine de vacances](screenshots/vacation.png)
+*Message de vacances avec dates et bouton de reprise*
+
+</details>
+
+---
+
+## 👉 [Voir la démo live →](https://zorglub385.github.io/eduplan/)
+*Données fictives anonymisées — aucune vraie information personnelle*
+
+---
+
+## Démarrage rapide
+
+**1.** [⬇️ Télécharger le ZIP](../../releases/latest) → extraire  
 **2.** Ouvrir `config.js` → coller votre URL iCal Pronote  
 **3.** Double-cliquer sur `index.html`
 
-**OU :**
-Aller sur le site web du projet, pour voir un emplois d'une personne fictive ! (correspond à la branche "Example" de ce répertoire. Cette branche permet de montrer une exemple d'emplois du temps bien configuré. Utiliser cette branche pour voir un exemple de configuration)
+C'est tout. Aucun serveur, aucun compte, aucune installation.
 
 ---
 
@@ -24,37 +53,35 @@ Aller sur le site web du projet, pour voir un emplois d'une personne fictive ! (
 | | |
 |--|--|
 | 📅 | Emploi du temps en temps réel depuis Pronote |
-| 🌙 ☀️ | Mode sombre et mode clair |
-| 📅 🗓 | Vue semaine et vue jour (clic sur l'en-tête) |
-| ⚠️ | Badge et toast si cours annulés cette semaine |
-| 🌴 | Message vacances avec dates de début/fin et bouton de reprise |
-| 🔴 | Ligne "maintenant" + cours en cours mis en surbrillance |
+| 🌙 ☀️ | Mode sombre et mode clair, persistant |
+| 🗓 | Vue semaine et vue jour (clic sur l'en-tête d'un jour) |
+| ⚠️ | Alerte automatique si cours annulés cette semaine |
+| 🌴 | Page vacances avec nom de la période, dates exactes, bouton de reprise |
+| 🔴 | Ligne "maintenant" + cours en cours mis en surbrillance pulsante |
 | 🔔 | Notifications navigateur (5 min avant chaque cours) |
 | 🖨️ | Impression / Export PDF en A4 paysage |
-| ⌨️ | Raccourcis clavier complets |
-| 📍 | Détection automatique de la zone scolaire (A/B/C) par IP |
 | ↔️ | Animations de navigation fluides |
-| 💾 | Thème persistant (localStorage) |
+| 📍 | Détection automatique de la zone scolaire A/B/C par IP |
+| ⌨️ | Raccourcis clavier complets |
 
 ---
 
 ## Installation
 
-### Prérequis
-- Un navigateur moderne (Chrome, Firefox, Safari, Edge)
-- Votre URL iCal Pronote
+### Option A — Sans Git (recommandé pour débuter)
 
-### Étapes
+1. [Télécharger la dernière release](../../releases/latest)
+2. Extraire le ZIP
+3. Ouvrir `config.js` dans un éditeur de texte
+4. Coller votre URL iCal Pronote
+5. Double-cliquer sur `index.html`
+
+### Option B — Avec Git
 
 ```bash
-# Cloner
 git clone https://github.com/Zorglub385/eduplan.git
 cd eduplan
-
-# Configurer
 # Ouvrez config.js et collez votre URL Pronote
-
-# Lancer
 # Double-cliquez sur index.html
 ```
 
@@ -62,32 +89,34 @@ cd eduplan
 
 ## Configuration
 
-Ouvrez **`config.js`** — c'est le seul fichier à modifier :
+Ouvrez **`config.js`** — c'est le **seul fichier à modifier** :
 
 ```js
 const EDUPLAN = {
 
-  // Votre URL iCal Pronote (Pronote › ⚙ Paramètres › Agenda › Exporter)
+  // Votre URL iCal Pronote (voir ci-dessous comment la trouver)
   ICS_URL: "https://votre-etab.index-education.net/pronote/ical/...",
 
   NOM:           "Prénom NOM",
   CLASSE:        "3ème B",
   ETABLISSEMENT: "Collège ...",
 
-  ZONE:  "AUTO",   // ou "A", "B", "C"
-  THEME: "dark",   // ou "light"
+  ZONE:  "AUTO",   // Détection auto, ou forcer "A", "B" ou "C"
+  THEME: "dark",   // "dark" ou "light"
 };
 ```
 
-### Où trouver l'URL iCal ?
+### Où trouver l'URL iCal Pronote ?
 
 1. Connectez-vous sur **Pronote** (espace élève ou parent)
-2. Icône **⚙ Paramètres** → onglet **Agenda**
-3. Cliquez sur **Exporter le calendrier**
-4. Copiez le lien iCal
+2. Cliquez sur l'icône **⚙ Paramètres** (en haut à droite)
+3. Onglet **Agenda**
+4. Bouton **Exporter le calendrier**
+5. Copiez le **lien iCal**
 
-> ⚠️ L'URL contient un token personnel (`icalsecurise=...`).  
-> Ne la commitez pas publiquement — ajoutez `config.js` à votre `.gitignore`.
+> ⚠️ **Sécurité** : l'URL contient un token personnel (`icalsecurise=...`).  
+> Ne la commitez jamais publiquement. Le `.gitignore` fourni ignore déjà `config.js`  
+> si vous utilisez Git — gardez-le hors du dépôt.
 
 ---
 
@@ -95,12 +124,12 @@ const EDUPLAN = {
 
 | Touche | Action |
 |--------|--------|
-| `←` | Semaine/jour précédent |
-| `→` | Semaine/jour suivant |
-| `Entrée` | Aujourd'hui |
-| `W` | Vue semaine |
-| `D` | Vue jour |
-| `Échap` | Fermer la modal |
+| `←` | Semaine / jour précédent |
+| `→` | Semaine / jour suivant |
+| `Entrée` | Revenir à aujourd'hui |
+| `W` | Basculer en vue Semaine |
+| `D` | Basculer en vue Jour |
+| `Échap` | Fermer la fenêtre de détail |
 
 ---
 
@@ -112,59 +141,55 @@ const EDUPLAN = {
 | **B** | Aix-Marseille, Amiens, Caen, Lille, Nancy-Metz, Nice, Orléans-Tours, Reims, Rennes, Rouen, Strasbourg |
 | **C** | Créteil, Montpellier, Paris, Toulouse, Versailles |
 
-Avec `ZONE: "AUTO"`, la zone est détectée automatiquement via [ipwhois.app](https://ipwhois.app).
+Avec `ZONE: "AUTO"`, la zone est détectée automatiquement via [ipwhois.app](https://ipwhois.app) (requête IP → région → zone).
 
 ---
 
-## Structure
+## Structure du projet
 
 ```
 eduplan/
-├── index.html   — Application complète (HTML + CSS + JS)
-├── config.js    — ⭐ Configuration (seul fichier à modifier)
+├── index.html      — Application complète (HTML + CSS + JS en un seul fichier)
+├── config.js       — ⭐ Votre configuration personnelle (seul fichier à modifier)
+├── .gitignore      — Protège config.js pour ne pas exposer votre URL Pronote
 └── README.md
 ```
 
+**Branches :**
+| Branche | Rôle |
+|---------|------|
+| `main` | Code source — `config.js` vierge, prêt à configurer |
+| `Example` | Démo GitHub Pages — emploi du temps fictif anonymisé |
+
 ---
 
-## Partager / Contribuer
+## Contribuer
 
-### Utiliser sans toucher au code
-Téléchargez la [dernière release](../../releases/latest), modifiez `config.js`, ouvrez `index.html`.
+Les Pull Requests sont les bienvenues ! Merci de lire [CONTRIBUTING.md](CONTRIBUTING.md) avant toute modification.
 
-### Mettre sur GitHub Pages
-1. Forkez ce repo
-2. Modifiez `config.js` avec votre URL (ou utilisez une variable d'environnement)
-3. Settings → Pages → Source: `main`, `/ (root)`
-4. Accédez à `https://USER.github.io/eduplan/`
-
-> ⚠️ Si vous hébergez publiquement, ne commitez **jamais** votre URL iCal personnelle.  
-> Utilisez un fichier `config.local.js` ignoré par git.
-
-### Idées d'amélioration
+**Idées en attente :**
 - Support d'autres ENT (Espace Numérique de Travail)
-- Synchronisation multi-utilisateur
-- Export .ics personnalisé
-- Widget mobile
+- Export `.ics` personnalisé
+- Widget mobile / extension navigateur
+
+Pour signaler un bug → [ouvrir une Issue](../../issues/new/choose)
 
 ---
 
 ## Vie privée
 
-- Aucune donnée n'est envoyée à un tiers sauf :
-  - Votre URL iCal vers les serveurs Pronote (via proxy CORS public)
-  - Une requête IP anonyme vers ipwhois.app pour détecter la zone
 - Aucun cookie, aucun analytics, aucun tracker
+- Seules deux requêtes externes sont effectuées :
+  - Votre calendrier Pronote (via un proxy CORS public, nécessaire pour contourner les restrictions navigateur)
+  - Une requête IP vers [ipwhois.app](https://ipwhois.app) pour détecter votre zone scolaire (désactivable en forçant `ZONE: "C"`)
 
 ---
-## Support
 
-Pour signaler un bug ou proposer une amélioration :
-👉 Ouvrez une Issue
+## Compatibilité
 
-## Contribuer
+✅ Chrome · Firefox · Safari · Edge — bureau et mobile  
+❌ Internet Explorer non supporté
 
-Les Pull Requests sont les bienvenues !
-Merci de lire CONTRIBUTING.md avant toute modification.
+---
 
 *EduPlan est un projet indépendant, non affilié à Pronote / Index Éducation.*
